@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-22T07:16:29.155Z",
+    "end": "2023-11-22T07:16:31.507Z",
+    "duration": 2352,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f060d32f-0575-4197-a2ff-5688ae8ae052",
+      "title": "",
+      "fullFile": "cypress\\e2e\\04_update_super_admin_profile.cy.js",
+      "file": "cypress\\e2e\\04_update_super_admin_profile.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "658b3983-58e6-4d58-8788-a9e031fb25c9",
+          "title": "Update Super Admin Profile =>",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST /update super-admin profile",
+              "fullTitle": "Update Super Admin Profile => POST /update super-admin profile",
+              "timedOut": null,
+              "duration": 2325,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const updateAdminProfilePath = '/api/v1/superadmin/add-profile';\nconst superAdminUpdate = {\n  profile_pic: 'image-1689240509992.png',\n  twofa: 0,\n  user_name: 'Dinesh Borudiya',\n  email: 'hemant.5exceptions@gmail.com',\n  password: null,\n  lang: 1\n};\ncy.request({\n  method: 'POST',\n  url: `${_defaults.baseURL}${updateAdminProfilePath}`,\n  body: superAdminUpdate,\n  headers: {\n    Authorization: `Bearer ${token}`\n  }\n}).then(response => {\n  // Log status and message\n  cy.log('Status: ' + response.status);\n  cy.log('Message: ' + response.body.message);\n  cy.log('Assertion Passed: Name matches / Updated');\n  // Log response body\n  cy.log('Response Body:', JSON.stringify(response.body, null, 2));\n});",
+              "err": {},
+              "uuid": "7ba37a32-80e1-4b97-8a4f-ecba20155233",
+              "parentUUID": "658b3983-58e6-4d58-8788-a9e031fb25c9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7ba37a32-80e1-4b97-8a4f-ecba20155233"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2325,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochareports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
