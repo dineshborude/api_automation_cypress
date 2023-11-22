@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-22T08:15:40.859Z",
+    "end": "2023-11-22T08:15:43.132Z",
+    "duration": 2273,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b4972711-27c5-4809-be44-256de98c1e64",
+      "title": "",
+      "fullFile": "cypress\\e2e\\01_super_admin_login.cy.js",
+      "file": "cypress\\e2e\\01_super_admin_login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5fdb9b3b-b156-4904-9966-50e26c50193e",
+          "title": "Super Admin Login =>",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST /super-admin-login",
+              "fullTitle": "Super Admin Login => POST /super-admin-login",
+              "timedOut": null,
+              "duration": 2231,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const superAdminLogin = {\n  username: _defaults.loginData.username,\n  password: _defaults.loginData.password,\n  role_id: _defaults.loginData.role_id\n};\ncy.request({\n  method: 'POST',\n  url: _defaults.baseURL + _defaults.endpointPath,\n  body: superAdminLogin\n}).then(response => {\n  // Check status\n  expect(response.status).to.eq(200);\n  // Log response body\n  cy.log('Response Body:', JSON.stringify(response.body, null, 2));\n});",
+              "err": {},
+              "uuid": "3c1f352f-d92d-4555-83ca-f9706739eac2",
+              "parentUUID": "5fdb9b3b-b156-4904-9966-50e26c50193e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3c1f352f-d92d-4555-83ca-f9706739eac2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2231,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochareports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

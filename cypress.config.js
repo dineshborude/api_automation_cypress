@@ -6,11 +6,11 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
-  reporter: "mochawesome",
+  reporter: "cypress-junit",
   reporterOptions: {
-    reportDir: "mochareports",
-    overwrite: true,
-    html: true,
-    json: true,
+    "cypress-junit": {
+      mochawesomeFilename: "mochareport.json",
+      junitFilename: "junitresults.[hash].xml",
+    },
   },
 });

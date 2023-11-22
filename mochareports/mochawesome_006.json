@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-22T08:15:50.930Z",
+    "end": "2023-11-22T08:15:53.017Z",
+    "duration": 2087,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e6efff81-eb14-4b25-9ee8-338ebf7de927",
+      "title": "",
+      "fullFile": "cypress\\e2e\\03_get_super_admin_profile.cy.js",
+      "file": "cypress\\e2e\\03_get_super_admin_profile.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "75679adc-92ca-4d18-8750-51188685c087",
+          "title": "GET Super Admin Profile Info",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET /get super-admin profile",
+              "fullTitle": "GET Super Admin Profile Info GET /get super-admin profile",
+              "timedOut": null,
+              "duration": 2054,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const getProfileEndpoint = '/api/v1/superadmin/get-profile';\ncy.request({\n  method: 'POST',\n  url: `${_defaults.baseURL}${getProfileEndpoint}`,\n  headers: {\n    Authorization: `Bearer ${token}`\n  }\n}).then(response => {\n  // Log status and message\n  cy.log('Status: ' + response.status);\n  cy.log('Message: ' + response.body.message);\n  // Assertions\n  expect(response.status).to.equal(200);\n  expect(response.body.data.email).to.equal('hemant.5exceptions@gmail.com');\n  cy.log('Assertion Passed: Email matches');\n  // Log response body\n  cy.log('Response Body:', JSON.stringify(response.body, null, 2));\n});",
+              "err": {},
+              "uuid": "3aef679a-c448-4f73-8860-91fd04e7e045",
+              "parentUUID": "75679adc-92ca-4d18-8750-51188685c087",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3aef679a-c448-4f73-8860-91fd04e7e045"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2054,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochareports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

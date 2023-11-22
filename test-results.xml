@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.257" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-11-22T09:36:45" tests="0" file="cypress\e2e\04_update_super_admin_profile.cy.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Update Super Admin Profile =&gt;" timestamp="2023-11-22T09:36:45" tests="1" failures="0" time="2.257">
+    <testcase name="Update Super Admin Profile =&gt; POST /update super-admin profile" time="2.257" classname="POST /update super-admin profile" failure="false" error="false" success="true">
+    </testcase>
+  </testsuite>
+</testsuites>
